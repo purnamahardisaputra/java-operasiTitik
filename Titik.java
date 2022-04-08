@@ -1,7 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.purnamahardisaputra.pertemuan2.unguided;
 
 import java.util.Scanner;
 
+/**
+ *
+ * @author purna
+ */
 public class Titik {
     private int x;
     private int y;
@@ -93,11 +102,13 @@ public class Titik {
             // handle 4
               System.out.println("FUNGSI PENCERMINAN TERHADAP SUMBU X\n");
               coba.xAxis();
+              coba.tampilTitik();
             break;
           case 5:
             // handle 5
               System.out.println("FUNGSI PENCERMINAN TERHADAP SUMBU Y\n");
               coba.yAxis();
+              coba.tampilTitik();
             break;
           case 6:
             // handle 5
