@@ -60,8 +60,18 @@ public class Titik {
         return Titik2;
     }
     
-    void Menu(Scanner Menu){
+    
+    public static void main(String[] args) {
+        //inisalisasi
+        Scanner iniTial = new Scanner(System.in);
+        Scanner iniTial1 = new Scanner(System.in);
+        Scanner Menu = new Scanner(System.in);
+     
+        Titik coba = new Titik();
         int selection;
+        
+        do{
+        System.out.println("\nMENU OPERASI TITIK");
         System.out.println("1. INISIALISASI TITIK ");
         System.out.println("2. TAMPIL TITIK ");
         System.out.println("3. PERKALIAN SKALAR TITIK ");
@@ -69,52 +79,50 @@ public class Titik {
         System.out.println("5. PENCERMINAN TERHADAP SUMBU Y ");
         System.out.println("6. JARAK ANTAR DUA TITIK ");
         System.out.println("0. KELUAR ");
-        System.out.println("MASUKAN PILIHAN : ");
+        System.out.print("MASUKAN PILIHAN : " );
         selection = Menu.nextInt();
         
         switch(selection){
           case 1:
             // handle 1
+              System.out.println("\nINISIALISASI TITIK");
+              coba.inisialisasiTitik(iniTial);
             break;
           case 2:
             // handle 2
+              System.out.println("\nFUNGSI MENAMPILKAN TITIK \n");
+              coba.tampilTitik();
             break;
           case 3:
             // handle 3
+              System.out.println("FUNGSI PERKALIAN SKALAR X DAN Y\n");
+              coba.perkalianSkalar();
             break;
           case 4:
             // handle 4
+              System.out.println("FUNGSI PENCERMINAN TERHADAP SUMBU X\n");
+              coba.xAxis();
             break;
           case 5:
             // handle 5
+              System.out.println("FUNGSI PENCERMINAN TERHADAP SUMBU Y\n");
+              coba.yAxis();
+            break;
+          case 6:
+            // handle 5
+              System.out.println("FUNGSI MENGHITUNG JARAK ANTARA DUA TITIK \n");
+              coba.jarak(iniTial1);
+            break;
+          case 0:
+              System.out.println("Program Diberhentikan!!!");
+              System.exit(0);
+            // handle 5
             break;
           default:
-        System.out.println("You have entered an invalid choice, please re-enter    your choice: ");
-        break;
+              System.out.println("Input is invalid");
+            break;
         }
-        
-    }
-    
-    public static void main(String[] args) {
-        //inisalisasi
-        Scanner iniTial = new Scanner(System.in);
-        Scanner iniTial1 = new Scanner(System.in);
-        Scanner Menu = new Scanner(System.in);
-        Titik coba = new Titik();
-        //get method inisialisasi
-      //  coba.inisialisasiTitik(iniTial);
-        //perkalian skalar
-     //   coba.perkalianSkalar();
-        //tampil value
-     //   coba.tampilTitik();
-        //jarak
-     //   coba.jarak(iniTial1);
-        
-     
-        
-        
-        
-        
+        }while(selection != 0);
 
     }
     
