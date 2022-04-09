@@ -9,15 +9,14 @@ import java.util.Scanner;
 
 /**
  *
- * @author purna
+ * @author purnamahardisaputra
  */
 public class Titik {
     private int x;
     private int y;
     
     public Titik(){
-        this.x = x;
-        this.y = y;
+        
     }
     
     void inisialisasiTitik(Scanner iniTial){
@@ -38,11 +37,16 @@ public class Titik {
     }
     
     void xAxis(){
-        this.y = (y-(y+y));
+        int sumbuX = x*-1;
+        System.out.println(sumbuX);
+        System.out.println("Nilai X adalah : " + sumbuX);
+        System.out.println("Nilai Y adalah : " + y);
     }
     
     void yAxis(){
-        this.x = (x-(x+x));
+        int sumbuY = y*-1;
+        System.out.println("Nilai X adalah : " + x);
+        System.out.println("Nilai Y adalah : " + sumbuY);
     }
     
     int jarak(Scanner iniTial1){
@@ -102,30 +106,27 @@ public class Titik {
             // handle 4
               System.out.println("FUNGSI PENCERMINAN TERHADAP SUMBU X\n");
               coba.xAxis();
-              coba.tampilTitik();
             break;
           case 5:
             // handle 5
               System.out.println("FUNGSI PENCERMINAN TERHADAP SUMBU Y\n");
               coba.yAxis();
-              coba.tampilTitik();
             break;
           case 6:
-            // handle 5
+            // handle 6
               System.out.println("FUNGSI MENGHITUNG JARAK ANTARA DUA TITIK \n");
               coba.jarak(iniTial1);
             break;
           case 0:
               System.out.println("Program Diberhentikan!!!");
               System.exit(0);
-            // handle 5
+            // purnamahardisaputra
             break;
           default:
               System.out.println("Input is invalid");
             break;
         }
         }while(selection != 0);
-
     }
     
     
